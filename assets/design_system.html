@@ -70,16 +70,35 @@
         }
 
         /* Delays */
-        .delay-100 { transition-delay: 0.1s; }
-        .delay-200 { transition-delay: 0.2s; }
-        .delay-300 { transition-delay: 0.3s; }
-        .delay-500 { transition-delay: 0.5s; }
-        .delay-700 { transition-delay: 0.7s; }
+        .delay-100 {
+            transition-delay: 0.1s;
+        }
+
+        .delay-200 {
+            transition-delay: 0.2s;
+        }
+
+        .delay-300 {
+            transition-delay: 0.3s;
+        }
+
+        .delay-500 {
+            transition-delay: 0.5s;
+        }
+
+        .delay-700 {
+            transition-delay: 0.7s;
+        }
 
         /* Beam Button Animation */
         @keyframes shimmer {
-            from { transform: translateX(-100%) skewX(-15deg); }
-            to { transform: translateX(200%) skewX(-15deg); }
+            from {
+                transform: translateX(-100%) skewX(-15deg);
+            }
+
+            to {
+                transform: translateX(200%) skewX(-15deg);
+            }
         }
 
         .beam-button {
@@ -111,10 +130,11 @@
             box-shadow: 0 0 30px rgba(28, 28, 28, 0.15);
             transform: translateY(-2px);
         }
-        
+
         .glow-border {
             position: relative;
         }
+
         .glow-border::after {
             content: '';
             position: absolute;
@@ -125,6 +145,7 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
+
         .glow-border:hover::after {
             opacity: 1;
         }
@@ -160,7 +181,7 @@
                 linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
         }
-        
+
         /* Outline Text (Transparent lettering) */
         .text-transparent-outline {
             -webkit-text-stroke: 1px #1C1C1C;
@@ -169,9 +190,15 @@
 
         /* Marquee Animation */
         @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
+
         .marquee-content {
             flex-shrink: 0;
             display: flex;
@@ -179,9 +206,15 @@
             min-width: 100%;
             animation: scroll 40s linear infinite;
         }
+
         @keyframes scroll {
-            from { transform: translateX(0); }
-            to { transform: translateX(-100%); }
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
         }
 
         /* Tooltip */
@@ -201,6 +234,7 @@
             white-space: nowrap;
             pointer-events: none;
         }
+
         .has-tooltip:hover .custom-tooltip {
             opacity: 1;
             visibility: visible;
@@ -215,17 +249,23 @@
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 nav-load">
         <div class="max-w-[1400px] mx-auto flex justify-between items-center px-6 py-5">
             <div class="flex items-center gap-8">
-                <a class="text-xs font-medium tracking-widest uppercase hover:text-gray-500 transition-colors" href="#typography">Typography</a>
-                <a class="text-xs font-medium tracking-widest uppercase hover:text-gray-500 transition-colors" href="#colors">Colors</a>
-                <a class="text-xs font-medium tracking-widest uppercase hidden md:block hover:text-gray-500 transition-colors" href="#components">Components</a>
+                <a class="text-xs font-medium tracking-widest uppercase hover:text-gray-500 transition-colors"
+                    href="#typography">Typography</a>
+                <a class="text-xs font-medium tracking-widest uppercase hover:text-gray-500 transition-colors"
+                    href="#colors">Colors</a>
+                <a class="text-xs font-medium tracking-widest uppercase hidden md:block hover:text-gray-500 transition-colors"
+                    href="#components">Components</a>
             </div>
             <div class="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 group cursor-pointer">
-                <iconify-icon class="text-xl group-hover:rotate-180 transition-transform duration-700" icon="solar:atom-linear"></iconify-icon>
+                <iconify-icon class="text-xl group-hover:rotate-180 transition-transform duration-700"
+                    icon="solar:atom-linear"></iconify-icon>
                 <span class="font-bold tracking-tighter text-lg">DESIGN SYSTEM</span>
             </div>
             <div class="flex items-center gap-8">
-                <a class="text-xs font-medium tracking-widest uppercase hidden md:block hover:text-gray-500 transition-colors" href="#animations">Animations</a>
-                <a class="text-xs font-medium tracking-widest uppercase hover:text-gray-500 transition-colors" href="#icons">Icons</a>
+                <a class="text-xs font-medium tracking-widest uppercase hidden md:block hover:text-gray-500 transition-colors"
+                    href="#animations">Animations</a>
+                <a class="text-xs font-medium tracking-widest uppercase hover:text-gray-500 transition-colors"
+                    href="#icons">Icons</a>
             </div>
         </div>
     </header>
@@ -240,54 +280,71 @@
 
         <!-- 1) Hero Row - Demonstration of Capabilities -->
         <section class="relative z-10 grid grid-cols-1 md:grid-cols-12 border-b border-stone-300 min-h-[700px] grid-bg">
-            <div class="col-span-1 md:col-span-8 p-10 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-stone-300 relative overflow-hidden">
+            <div
+                class="col-span-1 md:col-span-8 p-10 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-stone-300 relative overflow-hidden">
                 <!-- Parallax background element -->
                 <div class="absolute -right-20 -top-20 opacity-10 animate-spin-slow pointer-events-none">
-                    <iconify-icon icon="solar:star-fall-bold-duotone" style="font-size: 400px; color: #1C1C1C;"></iconify-icon>
+                    <iconify-icon icon="solar:star-fall-bold-duotone"
+                        style="font-size: 400px; color: #1C1C1C;"></iconify-icon>
                 </div>
-                
+
                 <div class="z-10" id="hero-title">
                     <h1 class="text-6xl md:text-8xl font-bold tracking-tighter leading-none mb-2">
-                        <span class="text-reveal-wrapper"><span class="text-reveal-content delay-100">Intelligent</span></span>
+                        <span class="text-reveal-wrapper"><span
+                                class="text-reveal-content delay-100">Intelligent</span></span>
                     </h1>
                     <h1 class="text-6xl md:text-8xl font-bold tracking-tighter leading-none mb-6">
-                        <span class="text-reveal-wrapper"><span class="text-reveal-content delay-200 text-transparent-outline transition-colors duration-500 hover:text-stone-900">Systems</span></span>
+                        <span class="text-reveal-wrapper"><span
+                                class="text-reveal-content delay-200 text-transparent-outline transition-colors duration-500 hover:text-stone-900">Systems</span></span>
                     </h1>
                     <p class="text-lg text-stone-600 max-w-lg mb-10 reveal delay-300">
-                        A beautiful, white-themed design system marrying brutalist layout and modern, soft animations. Precise physics, pure neutral palette.
+                        A beautiful, white-themed design system marrying brutalist layout and modern, soft animations.
+                        Precise physics, pure neutral palette.
                     </p>
-                    
+
                     <div class="flex flex-wrap gap-4 reveal delay-500">
-                        <button class="group beam-button px-6 py-3 bg-stone-900 text-white rounded-md text-sm font-medium hover:bg-stone-700 transition-all flex items-center gap-2 glow-on-hover shadow-lg">
+                        <button
+                            class="group beam-button px-6 py-3 bg-stone-900 text-white rounded-md text-sm font-medium hover:bg-stone-700 transition-all flex items-center gap-2 glow-on-hover shadow-lg">
                             Get Started
-                            <iconify-icon class="text-lg group-hover:translate-x-1 transition-transform" icon="solar:arrow-right-linear"></iconify-icon>
+                            <iconify-icon class="text-lg group-hover:translate-x-1 transition-transform"
+                                icon="solar:arrow-right-linear"></iconify-icon>
                         </button>
-                        <a href="#components" class="px-6 py-3 border border-stone-300 text-stone-800 rounded-md text-sm font-medium hover:bg-stone-100 transition-all">
+                        <a href="#components"
+                            class="px-6 py-3 border border-stone-300 text-stone-800 rounded-md text-sm font-medium hover:bg-stone-100 transition-all">
                             View Components
                         </a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-span-1 md:col-span-4 grid grid-rows-2 h-full">
                 <!-- Stats / Interactive Elements -->
-                <div class="row-span-1 border-b border-stone-300 p-8 flex flex-col justify-center reveal delay-300 bg-white group hover:bg-stone-50 transition-colors">
+                <div
+                    class="row-span-1 border-b border-stone-300 p-8 flex flex-col justify-center reveal delay-300 bg-white group hover:bg-stone-50 transition-colors">
                     <div class="flex justify-between items-start mb-6">
-                        <iconify-icon class="text-4xl text-stone-300 group-hover:text-stone-900 transition-colors duration-500" icon="solar:layers-minimalistic-linear"></iconify-icon>
+                        <iconify-icon
+                            class="text-4xl text-stone-300 group-hover:text-stone-900 transition-colors duration-500"
+                            icon="solar:layers-minimalistic-linear"></iconify-icon>
                         <span class="text-xs font-mono uppercase tracking-widest text-stone-400">Tokens</span>
                     </div>
-                    <h2 class="text-4xl font-medium tracking-tighter group-hover:translate-x-2 transition-transform duration-500 text-stone-900">140+</h2>
+                    <h2
+                        class="text-4xl font-medium tracking-tighter group-hover:translate-x-2 transition-transform duration-500 text-stone-900">
+                        140+</h2>
                     <p class="text-sm text-stone-500 mt-2">Design tokens built into the system.</p>
                 </div>
-                
-                <div class="row-span-1 p-8 flex flex-col justify-center reveal delay-500 bg-stone-900 text-white flashlight-card relative overflow-hidden group" 
-                     onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
+
+                <div class="row-span-1 p-8 flex flex-col justify-center reveal delay-500 bg-stone-900 text-white flashlight-card relative overflow-hidden group"
+                    onmousemove="const rect = this.getBoundingClientRect(); this.style.setProperty('--mouse-x', `${event.clientX - rect.left}px`); this.style.setProperty('--mouse-y', `${event.clientY - rect.top}px`);">
                     <div class="relative z-10">
                         <div class="flex justify-between items-start mb-6">
-                            <iconify-icon class="text-4xl text-stone-600 group-hover:text-white transition-colors duration-500" icon="solar:cpu-bold-duotone"></iconify-icon>
+                            <iconify-icon
+                                class="text-4xl text-stone-600 group-hover:text-white transition-colors duration-500"
+                                icon="solar:cpu-bold-duotone"></iconify-icon>
                             <span class="text-xs font-mono uppercase tracking-widest text-stone-500">Engine</span>
                         </div>
-                        <h2 class="text-4xl font-medium tracking-tighter group-hover:translate-x-2 transition-transform duration-500">v4.0</h2>
+                        <h2
+                            class="text-4xl font-medium tracking-tighter group-hover:translate-x-2 transition-transform duration-500">
+                            v4.0</h2>
                         <p class="text-sm text-stone-400 mt-2">Powered by CSS variables and semantic HTML.</p>
                     </div>
                 </div>
@@ -325,45 +382,58 @@
                 <span class="text-xs font-mono uppercase text-stone-500 block mb-2 tracking-widest">Foundation 01</span>
                 <h2 class="text-4xl font-semibold tracking-tight">Typography</h2>
             </div>
-            
+
             <div class="grid grid-cols-1">
                 <!-- H1 -->
-                <div class="grid grid-cols-1 md:grid-cols-12 border-b border-stone-300 p-8 md:p-12 items-baseline reveal delay-100 hover:bg-stone-50 transition-colors">
-                    <div class="col-span-3 text-xs font-mono text-stone-400 uppercase tracking-widest mb-4 md:mb-0">H1 Display</div>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-12 border-b border-stone-300 p-8 md:p-12 items-baseline reveal delay-100 hover:bg-stone-50 transition-colors">
+                    <div class="col-span-3 text-xs font-mono text-stone-400 uppercase tracking-widest mb-4 md:mb-0">H1
+                        Display</div>
                     <div class="col-span-7">
-                        <h1 class="text-6xl md:text-8xl font-bold tracking-tighter leading-none text-stone-900">Headline 1</h1>
+                        <h1 class="text-6xl md:text-8xl font-bold tracking-tighter leading-none text-stone-900">Headline
+                            1</h1>
                     </div>
                     <div class="col-span-2 text-left md:text-right text-xs font-mono text-stone-400 opacity-60">
-                        font-family: Inter<br/>weight: 700<br/>size: 6rem / line-height: 1
+                        font-family: Inter<br />weight: 700<br />size: 6rem / line-height: 1
                     </div>
                 </div>
                 <!-- H2 -->
-                <div class="grid grid-cols-1 md:grid-cols-12 border-b border-stone-300 p-8 md:p-12 items-baseline reveal delay-200 hover:bg-stone-50 transition-colors">
-                    <div class="col-span-3 text-xs font-mono text-stone-400 uppercase tracking-widest mb-4 md:mb-0">H2 Section Title</div>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-12 border-b border-stone-300 p-8 md:p-12 items-baseline reveal delay-200 hover:bg-stone-50 transition-colors">
+                    <div class="col-span-3 text-xs font-mono text-stone-400 uppercase tracking-widest mb-4 md:mb-0">H2
+                        Section Title</div>
                     <div class="col-span-7">
-                        <h2 class="text-4xl md:text-5xl font-semibold tracking-tight leading-tight text-stone-900">Design Systems & Logic</h2>
+                        <h2 class="text-4xl md:text-5xl font-semibold tracking-tight leading-tight text-stone-900">
+                            Design Systems & Logic</h2>
                     </div>
                     <div class="col-span-2 text-left md:text-right text-xs font-mono text-stone-400 opacity-60">
-                        weight: 600<br/>size: 3rem
+                        weight: 600<br />size: 3rem
                     </div>
                 </div>
                 <!-- Body -->
-                <div class="grid grid-cols-1 md:grid-cols-12 border-b border-stone-300 p-8 md:p-12 items-baseline reveal delay-300 hover:bg-stone-50 transition-colors">
-                    <div class="col-span-3 text-xs font-mono text-stone-400 uppercase tracking-widest mb-4 md:mb-0">Body / Paragraph</div>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-12 border-b border-stone-300 p-8 md:p-12 items-baseline reveal delay-300 hover:bg-stone-50 transition-colors">
+                    <div class="col-span-3 text-xs font-mono text-stone-400 uppercase tracking-widest mb-4 md:mb-0">Body
+                        / Paragraph</div>
                     <div class="col-span-7">
                         <p class="text-base md:text-lg leading-relaxed text-stone-700 max-w-2xl">
-                            Our primary typeface is Inter. It's a highly legible, geometrically constructed font designed specifically for computer screens. It scaling gracefully across all viewports.
+                            Our primary typeface is Inter. It's a highly legible, geometrically constructed font
+                            designed specifically for computer screens. It scaling gracefully across all viewports.
                         </p>
                     </div>
                     <div class="col-span-2 text-left md:text-right text-xs font-mono text-stone-400 opacity-60">
-                        weight: 400<br/>size: 1.125rem
+                        weight: 400<br />size: 1.125rem
                     </div>
                 </div>
                 <!-- Labels -->
-                <div class="grid grid-cols-1 md:grid-cols-12 p-8 md:p-12 items-center reveal delay-400 hover:bg-stone-50 transition-colors">
-                    <div class="col-span-3 text-xs font-mono text-stone-400 uppercase tracking-widest mb-4 md:mb-0">Label / Helper</div>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-12 p-8 md:p-12 items-center reveal delay-400 hover:bg-stone-50 transition-colors">
+                    <div class="col-span-3 text-xs font-mono text-stone-400 uppercase tracking-widest mb-4 md:mb-0">
+                        Label / Helper</div>
                     <div class="col-span-7 flex gap-4">
-                        <span class="text-xs font-mono uppercase tracking-widest text-stone-500 bg-stone-100 px-2 py-1 rounded">Primary Info</span>
+                        <span
+                            class="text-xs font-mono uppercase tracking-widest text-stone-500 bg-stone-100 px-2 py-1 rounded">Primary
+                            Info</span>
                         <span class="text-xs text-stone-400">Helper text for contextual information.</span>
                     </div>
                     <div class="col-span-2 text-left md:text-right text-xs font-mono text-stone-400 opacity-60">
@@ -379,10 +449,11 @@
                 <span class="text-xs font-mono uppercase text-stone-500 block mb-2 tracking-widest">Foundation 02</span>
                 <h2 class="text-4xl font-semibold tracking-tight">System Colors</h2>
             </div>
-            
+
             <div class="grid grid-cols-2 md:grid-cols-6 border-b border-stone-300">
                 <!-- Pure White -->
-                <div class="col-span-2 md:col-span-2 p-8 md:p-12 border-r border-b md:border-b-0 border-stone-300 bg-[#FFFFFF] flex flex-col justify-between aspect-[16/9] group glow-on-hover hover:z-10 bg-white">
+                <div
+                    class="col-span-2 md:col-span-2 p-8 md:p-12 border-r border-b md:border-b-0 border-stone-300 bg-[#FFFFFF] flex flex-col justify-between aspect-[16/9] group glow-on-hover hover:z-10 bg-white">
                     <div class="text-stone-900 font-bold tracking-tight">Background Main</div>
                     <div class="flex justify-between w-full text-xs font-mono text-stone-400">
                         <span>HEX #FFFFFF</span>
@@ -390,7 +461,8 @@
                     </div>
                 </div>
                 <!-- Stone 50 -->
-                <div class="col-span-2 md:col-span-2 p-8 md:p-12 border-r border-b md:border-b-0 border-stone-300 bg-stone-50 flex flex-col justify-between aspect-[16/9] group glow-on-hover hover:z-10">
+                <div
+                    class="col-span-2 md:col-span-2 p-8 md:p-12 border-r border-b md:border-b-0 border-stone-300 bg-stone-50 flex flex-col justify-between aspect-[16/9] group glow-on-hover hover:z-10">
                     <div class="text-stone-800 font-bold tracking-tight">Surface Elevate</div>
                     <div class="flex justify-between w-full text-xs font-mono text-stone-400">
                         <span>HEX #F9FAFB</span>
@@ -398,7 +470,8 @@
                     </div>
                 </div>
                 <!-- Stone 900 (Accent) -->
-                <div class="col-span-2 md:col-span-2 p-8 md:p-12 bg-stone-900 flex flex-col justify-between aspect-[16/9] group glow-on-hover hover:z-10">
+                <div
+                    class="col-span-2 md:col-span-2 p-8 md:p-12 bg-stone-900 flex flex-col justify-between aspect-[16/9] group glow-on-hover hover:z-10">
                     <div class="text-white font-bold tracking-tight">Primary Accent</div>
                     <div class="flex justify-between w-full text-xs font-mono text-stone-400">
                         <span>HEX #1C1C1C</span>
@@ -406,13 +479,15 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="p-8 md:p-12 bg-stone-100 flex gap-4 overflow-x-auto no-scrollbar items-center reveal">
                 <span class="text-xs font-mono text-stone-500 mr-6">Usage Contexts:</span>
                 <span class="px-3 py-1 bg-white border border-stone-200 text-xs text-stone-600 rounded">text</span>
-                <span class="px-3 py-1 bg-white border border-stone-200 text-xs text-stone-600 rounded">background</span>
+                <span
+                    class="px-3 py-1 bg-white border border-stone-200 text-xs text-stone-600 rounded">background</span>
                 <span class="px-3 py-1 bg-white border border-stone-200 text-xs text-stone-600 rounded">border</span>
-                <span class="px-3 py-1 bg-white border border-stone-200 text-xs text-stone-600 rounded">hover states</span>
+                <span class="px-3 py-1 bg-white border border-stone-200 text-xs text-stone-600 rounded">hover
+                    states</span>
             </div>
         </section>
 
@@ -422,33 +497,39 @@
                 <span class="text-xs font-mono uppercase text-stone-500 block mb-2 tracking-widest">Interface 03</span>
                 <h2 class="text-4xl font-semibold tracking-tight">UI Components</h2>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2">
                 <!-- Left Column -->
                 <div class="border-b md:border-b-0 md:border-r border-stone-300 p-8 md:p-12">
-                    
+
                     <!-- Buttons -->
                     <div class="mb-16 reveal delay-100">
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-stone-900 mb-6 flex items-center gap-2">
+                        <h3
+                            class="text-sm font-bold uppercase tracking-widest text-stone-900 mb-6 flex items-center gap-2">
                             <iconify-icon icon="solar:mouse-circle-linear"></iconify-icon> Buttons
                         </h3>
                         <div class="space-y-6">
                             <div class="flex flex-wrap items-center gap-4">
-                                <button class="group beam-button px-6 py-2.5 bg-stone-900 text-white rounded-md text-sm font-medium hover:bg-stone-800 transition-all flex items-center gap-2">
+                                <button
+                                    class="group beam-button px-6 py-2.5 bg-stone-900 text-white rounded-md text-sm font-medium hover:bg-stone-800 transition-all flex items-center gap-2">
                                     Primary Action
                                 </button>
-                                <button class="px-6 py-2.5 border border-stone-300 bg-white text-stone-800 rounded-md text-sm font-medium hover:bg-stone-50 hover:border-stone-400 transition-all">
+                                <button
+                                    class="px-6 py-2.5 border border-stone-300 bg-white text-stone-800 rounded-md text-sm font-medium hover:bg-stone-50 hover:border-stone-400 transition-all">
                                     Secondary Action
                                 </button>
-                                <button class="px-6 py-2.5 text-stone-600 rounded-md text-sm font-medium hover:text-stone-900 hover:bg-stone-100 transition-all">
+                                <button
+                                    class="px-6 py-2.5 text-stone-600 rounded-md text-sm font-medium hover:text-stone-900 hover:bg-stone-100 transition-all">
                                     Ghost Button
                                 </button>
                             </div>
                             <div class="flex items-center gap-4">
-                                <button class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 hover:bg-stone-900 hover:text-white transition-all duration-300">
+                                <button
+                                    class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-600 hover:bg-stone-900 hover:text-white transition-all duration-300">
                                     <iconify-icon icon="solar:heart-linear"></iconify-icon>
                                 </button>
-                                <button class="w-10 h-10 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 hover:border-stone-900 transition-all duration-300">
+                                <button
+                                    class="w-10 h-10 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 hover:border-stone-900 transition-all duration-300">
                                     <iconify-icon icon="solar:menu-dots-linear"></iconify-icon>
                                 </button>
                             </div>
@@ -457,23 +538,30 @@
 
                     <!-- Inputs & Forms -->
                     <div class="mb-16 reveal delay-200">
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-stone-900 mb-6 flex items-center gap-2">
+                        <h3
+                            class="text-sm font-bold uppercase tracking-widest text-stone-900 mb-6 flex items-center gap-2">
                             <iconify-icon icon="solar:keyboard-linear"></iconify-icon> Inputs & Forms
                         </h3>
                         <div class="space-y-4 max-w-sm">
                             <div>
                                 <label class="block text-xs font-mono text-stone-500 mb-1">Email Address</label>
                                 <div class="relative group">
-                                    <iconify-icon class="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 group-focus-within:text-stone-800 transition-colors" icon="solar:letter-linear"></iconify-icon>
-                                    <input type="email" placeholder="hello@example.com" class="w-full pl-10 pr-4 py-2.5 bg-stone-50 border border-stone-200 rounded-md text-sm focus:outline-none focus:border-stone-500 focus:bg-white transition-all">
+                                    <iconify-icon
+                                        class="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 group-focus-within:text-stone-800 transition-colors"
+                                        icon="solar:letter-linear"></iconify-icon>
+                                    <input type="email" placeholder="hello@example.com"
+                                        class="w-full pl-10 pr-4 py-2.5 bg-stone-50 border border-stone-200 rounded-md text-sm focus:outline-none focus:border-stone-500 focus:bg-white transition-all">
                                 </div>
                             </div>
                             <div>
                                 <label class="flex items-center gap-2 cursor-pointer group">
-                                    <div class="relative flex items-center justify-center w-5 h-5 border border-stone-300 rounded bg-stone-50 group-hover:border-stone-500 transition-colors">
-                                        <iconify-icon icon="solar:check-read-linear" class="text-white opacity-0 transition-opacity absolute text-xs"></iconify-icon>
+                                    <div
+                                        class="relative flex items-center justify-center w-5 h-5 border border-stone-300 rounded bg-stone-50 group-hover:border-stone-500 transition-colors">
+                                        <iconify-icon icon="solar:check-read-linear"
+                                            class="text-white opacity-0 transition-opacity absolute text-xs"></iconify-icon>
                                     </div>
-                                    <span class="text-sm text-stone-600 select-none group-hover:text-stone-900">Remember me</span>
+                                    <span class="text-sm text-stone-600 select-none group-hover:text-stone-900">Remember
+                                        me</span>
                                 </label>
                             </div>
                         </div>
@@ -481,16 +569,21 @@
 
                     <!-- Tooltips & Badges -->
                     <div class="reveal delay-300">
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-stone-900 mb-6 flex items-center gap-2">
+                        <h3
+                            class="text-sm font-bold uppercase tracking-widest text-stone-900 mb-6 flex items-center gap-2">
                             <iconify-icon icon="solar:tag-linear"></iconify-icon> Badges & Tooltips
                         </h3>
                         <div class="flex flex-wrap gap-4 items-center">
-                            <span class="px-2 py-1 bg-stone-100 text-stone-600 text-xs rounded border border-stone-200">Neutral</span>
-                            <span class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded border border-green-200">Success</span>
-                            <span class="px-2 py-1 bg-red-50 text-red-700 text-xs rounded border border-red-200">Danger</span>
-                            
+                            <span
+                                class="px-2 py-1 bg-stone-100 text-stone-600 text-xs rounded border border-stone-200">Neutral</span>
+                            <span
+                                class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded border border-green-200">Success</span>
+                            <span
+                                class="px-2 py-1 bg-red-50 text-red-700 text-xs rounded border border-red-200">Danger</span>
+
                             <div class="relative inline-block ml-4 has-tooltip">
-                                <iconify-icon class="text-xl text-stone-400 hover:text-stone-800 cursor-help" icon="solar:info-circle-linear"></iconify-icon>
+                                <iconify-icon class="text-xl text-stone-400 hover:text-stone-800 cursor-help"
+                                    icon="solar:info-circle-linear"></iconify-icon>
                                 <span class="custom-tooltip shadow-lg">Information available</span>
                             </div>
                         </div>
@@ -499,53 +592,65 @@
 
                 <!-- Right Column -->
                 <div class="p-8 md:p-12 bg-stone-50">
-                    
+
                     <!-- Cards -->
                     <div class="mb-16 reveal delay-400">
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-stone-900 mb-6 flex items-center gap-2">
+                        <h3
+                            class="text-sm font-bold uppercase tracking-widest text-stone-900 mb-6 flex items-center gap-2">
                             <iconify-icon icon="solar:box-linear"></iconify-icon> Cards
                         </h3>
-                        
+
                         <!-- Content Card -->
-                        <div class="bg-white border border-stone-200 rounded-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group glow-border">
+                        <div
+                            class="bg-white border border-stone-200 rounded-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group glow-border">
                             <div class="flex justify-between items-start mb-4">
                                 <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center">
-                                    <iconify-icon class="text-stone-600" icon="solar:chart-square-linear"></iconify-icon>
+                                    <iconify-icon class="text-stone-600"
+                                        icon="solar:chart-square-linear"></iconify-icon>
                                 </div>
-                                <span class="text-xs font-mono text-stone-400 group-hover:text-stone-900 transition-colors">Analytics</span>
+                                <span
+                                    class="text-xs font-mono text-stone-400 group-hover:text-stone-900 transition-colors">Analytics</span>
                             </div>
                             <h4 class="text-xl font-semibold mb-2 text-stone-900">Data Visualization</h4>
-                            <p class="text-sm text-stone-500 mb-4 line-clamp-2">A comprehensive suite of tools for rendering complex datasets into understandable formats.</p>
+                            <p class="text-sm text-stone-500 mb-4 line-clamp-2">A comprehensive suite of tools for
+                                rendering complex datasets into understandable formats.</p>
                             <div class="flex items-center text-sm font-medium text-stone-900">
-                                Read More <iconify-icon class="ml-2 transition-transform group-hover:translate-x-1" icon="solar:arrow-right-linear"></iconify-icon>
+                                Read More <iconify-icon class="ml-2 transition-transform group-hover:translate-x-1"
+                                    icon="solar:arrow-right-linear"></iconify-icon>
                             </div>
                         </div>
                     </div>
 
                     <!-- Modals & Feedback -->
                     <div class="reveal delay-500">
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-stone-900 mb-6 flex items-center gap-2">
+                        <h3
+                            class="text-sm font-bold uppercase tracking-widest text-stone-900 mb-6 flex items-center gap-2">
                             <iconify-icon icon="solar:danger-circle-linear"></iconify-icon> Modals & Overlays
                         </h3>
-                        
-                        <div class="relative w-full max-w-md border border-stone-200 rounded-lg bg-white shadow-2xl p-6 overflow-hidden">
+
+                        <div
+                            class="relative w-full max-w-md border border-stone-200 rounded-lg bg-white shadow-2xl p-6 overflow-hidden">
                             <!-- Overlay effect background -->
                             <div class="absolute inset-0 bg-stone-900/5 mix-blend-multiply pointer-events-none"></div>
-                            
+
                             <div class="flex justify-between items-start mb-4 relative z-10">
                                 <h4 class="text-lg font-semibold text-stone-900">Confirm Action</h4>
                                 <button class="text-stone-400 hover:text-stone-900">
                                     <iconify-icon icon="solar:close-circle-linear" class="text-xl"></iconify-icon>
                                 </button>
                             </div>
-                            <p class="text-sm text-stone-600 mb-6 relative z-10">Are you sure you want to proceed? This action cannot be undone and will permanently delete the selected items.</p>
+                            <p class="text-sm text-stone-600 mb-6 relative z-10">Are you sure you want to proceed? This
+                                action cannot be undone and will permanently delete the selected items.</p>
                             <div class="flex gap-3 justify-end relative z-10">
-                                <button class="px-4 py-2 border border-stone-300 text-stone-700 bg-white rounded-md text-sm font-medium hover:bg-stone-50">Cancel</button>
-                                <button class="px-4 py-2 bg-stone-900 text-white rounded-md text-sm font-medium hover:bg-stone-800">Confirm Deletion</button>
+                                <button
+                                    class="px-4 py-2 border border-stone-300 text-stone-700 bg-white rounded-md text-sm font-medium hover:bg-stone-50">Cancel</button>
+                                <button
+                                    class="px-4 py-2 bg-stone-900 text-white rounded-md text-sm font-medium hover:bg-stone-800">Confirm
+                                    Deletion</button>
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -555,37 +660,57 @@
             <div class="max-w-4xl mx-auto px-6 text-center reveal">
                 <span class="text-xs font-mono uppercase text-stone-500 block mb-2 tracking-widest">Assets 04</span>
                 <h2 class="text-4xl font-semibold tracking-tight mb-16">Solar Iconography</h2>
-                
+
                 <div class="grid grid-cols-4 md:grid-cols-8 gap-8 justify-items-center">
-                    <iconify-icon class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer" icon="solar:home-smile-linear"></iconify-icon>
-                    <iconify-icon class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer delay-100" icon="solar:user-circle-linear"></iconify-icon>
-                    <iconify-icon class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer delay-200" icon="solar:settings-linear"></iconify-icon>
-                    <iconify-icon class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer delay-300" icon="solar:wallet-money-linear"></iconify-icon>
-                    <iconify-icon class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer delay-400" icon="solar:chat-round-line-linear"></iconify-icon>
-                    <iconify-icon class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer delay-500" icon="solar:camera-linear"></iconify-icon>
-                    <iconify-icon class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer delay-600" icon="solar:bell-linear"></iconify-icon>
-                    <iconify-icon class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer delay-700" icon="solar:calendar-linear"></iconify-icon>
+                    <iconify-icon class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer"
+                        icon="solar:home-smile-linear"></iconify-icon>
+                    <iconify-icon
+                        class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer delay-100"
+                        icon="solar:user-circle-linear"></iconify-icon>
+                    <iconify-icon
+                        class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer delay-200"
+                        icon="solar:settings-linear"></iconify-icon>
+                    <iconify-icon
+                        class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer delay-300"
+                        icon="solar:wallet-money-linear"></iconify-icon>
+                    <iconify-icon
+                        class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer delay-400"
+                        icon="solar:chat-round-line-linear"></iconify-icon>
+                    <iconify-icon
+                        class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer delay-500"
+                        icon="solar:camera-linear"></iconify-icon>
+                    <iconify-icon
+                        class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer delay-600"
+                        icon="solar:bell-linear"></iconify-icon>
+                    <iconify-icon
+                        class="text-3xl text-stone-800 hover:scale-125 transition-transform cursor-pointer delay-700"
+                        icon="solar:calendar-linear"></iconify-icon>
                 </div>
             </div>
         </section>
-        
+
         <!-- 6) Interactive Areas / Foot -->
         <section id="animations" class="relative z-10 py-32 bg-stone-900 text-stone-200 overflow-hidden text-center">
             <!-- Background Glow -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white opacity-5 rounded-full blur-[100px] pointer-events-none"></div>
-            
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white opacity-5 rounded-full blur-[100px] pointer-events-none">
+            </div>
+
             <div class="relative z-10 reveal">
                 <span class="text-xs font-mono uppercase text-stone-500 block mb-4 tracking-widest">Experience</span>
                 <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8 text-white">Motion brings life.</h2>
-                <p class="text-stone-400 max-w-md mx-auto mb-10 text-lg">Every element within the system is designed to respond, shift, and glow gracefully with user intent.</p>
-                
-                <button class="px-8 py-4 bg-white text-stone-900 rounded-full font-semibold uppercase tracking-wider text-sm hover:scale-105 transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.2)]">
+                <p class="text-stone-400 max-w-md mx-auto mb-10 text-lg">Every element within the system is designed to
+                    respond, shift, and glow gracefully with user intent.</p>
+
+                <button
+                    class="px-8 py-4 bg-white text-stone-900 rounded-full font-semibold uppercase tracking-wider text-sm hover:scale-105 transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.2)]">
                     Explore Repository
                 </button>
             </div>
-            
+
             <div class="mt-32 text-center opacity-10 pointer-events-none select-none">
-                <span class="text-[8rem] md:text-[14rem] font-bold leading-none tracking-tighter whitespace-nowrap">DESIGN.SYS</span>
+                <span
+                    class="text-[8rem] md:text-[14rem] font-bold leading-none tracking-tighter whitespace-nowrap">DESIGN.SYS</span>
             </div>
         </section>
 
@@ -598,13 +723,13 @@
             // 1. Trigger Initial Load Animation
             setTimeout(() => {
                 const header = document.querySelector('header');
-                if(header) header.classList.add('loaded');
+                if (header) header.classList.add('loaded');
             }, 100);
 
             // Trigger Hero Title Text Reveal
             setTimeout(() => {
                 const heroTitle = document.getElementById('hero-title');
-                if(heroTitle) heroTitle.classList.add('reveal-active');
+                if (heroTitle) heroTitle.classList.add('reveal-active');
             }, 300);
 
             // 2. Intersection Observer for Scroll Animations
